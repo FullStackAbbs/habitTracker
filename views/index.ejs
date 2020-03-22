@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>HabitTracker</title>
+  <style media="screen">
+    body{ background: url("indexBKNG.png" )left top / cover no-repeat;
+  }
+  </style>
+</head>
+<body>
+  <h1>HabitTracker</h1>
+  <h2> HOW TO USE: </h2>
+  <h3> Log the name of your habit</h3>
+  <h3> Log the reason why you want to maintain this habit for motivation !</h3>
+
+  <ul class="messages">
+  <% for(var i=0; i < messages.length; i++) {%>
+    <li class="message">
+      <span><%= messages[i].habit %></span>
+      <span><%= messages[i].whys %></span>
+      <span><%= messages[i].dayCount %></span>
+
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="New Way of Living" name="habit">
+    <input type="text" placeholder="Why this way of living ? " name="whys">
+    <!-- <input type="number" placeholder='How long do we want to maintain this habit ?' name="dayCount"> -->
+
+    <button type="submit">Submit</button>
+  </form>
+  <div>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
