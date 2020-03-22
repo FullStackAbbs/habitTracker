@@ -22,3 +22,13 @@ Optimizations would include using the Stripe API to finacinally encourge users t
 
 # Link
 https://distracted-agnesi-f50a77.netlify.com
+
+## Installation
+
+1. Clone repo
+2. run `npm install`
+
+## Usage
+
+1. run ` ./folderDir/ node server.js`
+2. Navigate to `localhost:3000`
